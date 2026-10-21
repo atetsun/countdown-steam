@@ -1,1 +1,39 @@
+name: Countdown Steam
+
+on:
+  schedule:
+    # Tiap jam (menit ke-5). Angka "hari/jam" di embed diperbarui di sini;
+    # teks <t:...:R> dihitung langsung oleh Discord di sisi pembaca.
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: countdown
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Perbarui pesan countdown
+        env:
+          DISCORD_WEBHOOK_COUNTDOWN: ${{ secrets.DISCORD_WEBHOOK_COUNTDOWN }}
+        run: python countdown.py
+
+      - name: Simpan id pesan (hanya berubah saat pesan pertama dibuat)
+        run: |
+          git config user.name "countdown-bot"
+          git config user.email "bot@users.noreply.github.com"
+          [ -f countdown_state.json ] && git add countdown_state.json || true
+          git diff --cached --quiet || (git commit -m "simpan id pesan countdown" && git pull --rebase && git push)
 
