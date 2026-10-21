@@ -32,8 +32,8 @@ WEBHOOK_FILE = os.path.join(BASE, "countdown_webhook.txt")
 ZONA = "America/Los_Angeles"
 JAM = "10:00"
 
-# Halaman countdown live (beranimasi). Kosongkan "" kalau tidak mau ada tautan.
-HALAMAN_URL = "https://atetsun.github.io/countdown-live/"
+# Tautan di embed ke halaman countdown live. Kosongkan "" kalau tidak mau ada tautan.
+HALAMAN_URL = "https://steamdb.info/sales/history/"
 
 USERNAME = "Steam Countdown"
 MAKS_MENDATANG = 4  # berapa event mendatang yang ditampilkan di bawah headline
@@ -162,7 +162,7 @@ def buat_payload(events, now):
         embed["image"] = {"url": e["gambar"]}
     if HALAMAN_URL:
         embed["url"] = HALAMAN_URL
-        embed["description"] += f"\n\n🔴 [Lihat countdown live (beranimasi)]({HALAMAN_URL})"
+        embed["description"] += f"\n\n🔴 [Lihat countdown live di SteamDB]({HALAMAN_URL})"
     return {"embeds": [embed], "allowed_mentions": {"parse": []}}
 
 
