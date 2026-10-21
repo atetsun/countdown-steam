@@ -15,8 +15,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 TOKEN = open(os.path.join(BASE, "token.txt")).read().strip()
 WEBHOOK_FILE = os.path.join(BASE, "countdown_webhook.txt")
 
-NAMA_CHANNEL = "countdown"
-LABEL_CHANNEL = "⏳・countdown"
+NAMA_CHANNEL = "event"
+LABEL_CHANNEL = "🍿・event"
 KATEGORI = "🎉 EVENT"
 TOPIK = "Countdown sale dan fest Steam. Diperbarui otomatis."
 NAMA_WEBHOOK = "Steam Countdown"
