@@ -1,0 +1,31 @@
+[
+  {"nama": "Next Fest: Oktober 2026", "jenis": "fest", "emoji": "🚀",
+   "mulai": "2026-10-19", "selesai": "2026-10-26"},
+
+  {"nama": "Steam Scream V Fest", "jenis": "fest", "emoji": "🎃",
+   "mulai": "2026-10-26", "selesai": "2026-11-02"},
+
+  {"nama": "Auto-Battler RPG Fest", "jenis": "fest", "emoji": "⚔️",
+   "mulai": "2026-11-16", "selesai": "2026-11-23"},
+
+  {"nama": "Winter Sale 2026", "jenis": "sale", "emoji": "❄️",
+   "mulai": "2026-12-17", "selesai": "2027-01-04"},
+
+  {"nama": "Next Fest: Februari 2027", "jenis": "fest", "emoji": "🚀",
+   "mulai": "2027-02-22", "selesai": "2027-03-01"},
+
+  {"nama": "Spring Sale 2027", "jenis": "sale", "emoji": "🌸",
+   "mulai": "2027-03-18", "selesai": "2027-03-25"},
+
+  {"nama": "Next Fest: Juni 2027", "jenis": "fest", "emoji": "🚀",
+   "mulai": "2027-06-14", "selesai": "2027-06-21"},
+
+  {"nama": "Summer Sale 2027", "jenis": "sale", "emoji": "☀️",
+   "mulai": "2027-06-24", "selesai": "2027-07-08"},
+
+  {"nama": "Autumn Sale 2027", "jenis": "sale", "emoji": "🍂", "perkiraan": true,
+   "mulai": "2027-10-01", "selesai": "2027-10-08"},
+
+  {"nama": "Winter Sale 2027", "jenis": "sale", "emoji": "❄️", "perkiraan": true,
+   "mulai": "2027-12-16", "selesai": "2028-01-03"}
+]
